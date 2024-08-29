@@ -1,6 +1,8 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
 const Page2 = () => {
+    const params = useParams()
     const videoStyle = {
         width: '100%',
         maxWidth: '800px',
@@ -17,7 +19,7 @@ const Page2 = () => {
                 disablePictureInPicture 
                 onContextMenu={(e) => e.preventDefault()} // This prevents right-click download
             >
-                <source src="https://www.youtube.com/watch?v=s2kx8UOqFOs&list=RDs2kx8UOqFOs&start_radio=1" type="video/mp4" />
+                <source src={`https://paula-be-production.up.railway.app/uploads${params.id}`} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
