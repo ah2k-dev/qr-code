@@ -30,7 +30,7 @@ const Page1 = () => {
       if (response.ok) {
         const result = await response.json();
         console.log("QR Code generated:", result);
-        setLink(`https://qr-code-psi-blush.vercel.app/video${result.filePath}`)
+        setLink(`https://paula-be-production.up.railway.app${result.filePath}`)
         // Handle the result (e.g., display the QR code)
       } else {
         console.error("Failed to generate QR Code");
